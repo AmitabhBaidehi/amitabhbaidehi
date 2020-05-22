@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <--to link css or image-->
+        <link href="{{url_for( 'static',filename='css/style.css' )}}" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <div class="logo">Amitabh Web Page</div>
+        <strong>
+                <nav>
+                    <ul>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
+                        <li><a href="{{url_for('home')}}">My Page</a></li>
+                    </ul>
+                </nav>
+            </strong>
+        <div class="container">
+            <!-- inherits the child page -->
+            {%block content%} {%endblock%}
+        </div>
+    </header>
+</body>
+
+</html>
